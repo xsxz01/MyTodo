@@ -15,7 +15,7 @@
     prism:ViewModelLocator.AutoWireViewModel="True"
     AllowsTransparency="True"
     Background="{DynamicResource MaterialDesignPaper}"
-    FontFamily="{DynamicResource MaterialDesignFont}"
+    FontFamily="微软雅黑"
     TextElement.FontSize="13"
     TextElement.FontWeight="Regular"
     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
@@ -76,6 +76,7 @@
                     x:Name="ColorZone"
                     Padding="16"
                     materialDesign:ShadowAssist.ShadowDepth="Depth2"
+                    CornerRadius="5"
                     DockPanel.Dock="Top"
                     Mode="PrimaryMid">
                     <DockPanel LastChildFill="False">
