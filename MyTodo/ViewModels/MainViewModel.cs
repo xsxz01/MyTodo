@@ -18,6 +18,7 @@ namespace MyTodo.ViewModels
         public DelegateCommand GoBackCommand { get; private set; }
         public DelegateCommand GoForwardCommand { get; private set; }
         public IRegionManager RegionManager { get; private set; }
+        private IRegionNavigationJournal regionNavigationJournal;
         public MainViewModel( IRegionManager regionManager)
         {
             this.menuBars = new ObservableCollection<MenuBar>();
@@ -41,7 +42,7 @@ namespace MyTodo.ViewModels
         }
 
 
-        private IRegionNavigationJournal regionNavigationJournal;
+        
         private void Navigate(MenuBar obj)
         {
             if (obj != null && !string.IsNullOrWhiteSpace(obj.NameSpace))
@@ -57,9 +58,6 @@ namespace MyTodo.ViewModels
             get { return menuBars; }
             set { menuBars = value;RaisePropertyChanged(); }
         }
-
-        
-
         void CreateMenuBar()
         {
             menuBars.Clear();
